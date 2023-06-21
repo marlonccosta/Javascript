@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Nascionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nascionalidade</h1>
+    Digite a sua Nascionalidade: <input type="text" name="texnas" id="texnas">
+    <input type="button" value="Verificar" onclick="nascionalidade()">
+    <div id="print">
+
+    </div>
+
+    <script>
+        function nascionalidade(){
+            var texnas = window.document.querySelector ('input#texnas')
+            var print = window.document.querySelector('div#print')
+            print.innerHTML = `<p> Sua nascionalidade é de ${texnas} `
+
+        }
+    </script>
+
+</body>
+</html>
