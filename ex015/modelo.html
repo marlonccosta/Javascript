@@ -8,14 +8,25 @@
 </head>
 <body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Verificador de idade</h1>
     </header>
     <section>
         <div>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis harum provident soluta possimus saepe, laudantium ipsa praesentium ex similique, incidunt corrupti! Voluptate repudiandae iure qui corrupti error odio vitae cumque.
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="1">
+            </p>
+            <p>sexo:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div>
-            
+        <div id="res">
+            Preencha os dados acima para ver os resultados! 
         </div>
     </section>
     <footer>
