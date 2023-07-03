@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do dia</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
-<body onload="carregar()">
+<body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos Contar</h1>
     </header>
     <section>
-        <div id="msg">
-           aqui vai aparecer a mensagem.... 
+        <div id="dados">
+            <p>Inicio: <input type="number" name="inicio" id="txti"></p>
+            <p>Fim: <input type="number" name="fim" id="txtf"></p>
+            <p>Passo: <input type="number" name="passo" id="txtp"></p>
+            <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
-        <div id="foto">
-            <img id= "imagem"src="fotomanha.png" alt="foto do dia">
+        <div id="res">
+            Preparado a contagem 
         </div>
     </section>
     <footer>

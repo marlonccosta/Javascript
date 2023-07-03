@@ -1,26 +1,31 @@
-function carregar(){
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
-    var data = new Date()
-    //var hora = data.getHours()
-    var hora = 8
-     
-   
-    msg.innerHTML = `Agora são ${hora} horas.`
-    if  (hora >= 0 && hora < 12) {
-        //bom dia
-        img.scr = 'fotomanha.png'  
-        document.body.style.background = '#e2cd9f'  
-    } else if(hora>= 12 && hora< 18){
-        //boa tarde!
-        img.src = 'fototarde.jpg'
-        document.body.style.background = '#b9846f'
-    }
+function  contar(){
+    let ini = document.getElementById('txti')
+    let fim = document.getElementById('txtf')
+    let passo = document.getElementById('txtp')
+    let res= document.getElementById('res')
     
-    else {
-        //boa noite
-        img.src = 'fotonoite.jpg'
-        document.body.style.background = '#515154'
-
+    if (ini.value.length == 0 || fim.value.length ==0 || passo.value.length ==0){
+        res.innerHTML = "impossivel contar!!!"
+        //window.alert('[erro] Falta dados!')
+        
+    } else {
+       res.innerHTML = "Contando: <br> "
+       let i = Number(ini.value)// convertendo o valor que esta dentro de i em valor númerico
+       let f = Number(fim.value)
+       let p = Number(passo.value)
+       if (p<=0){
+        window.alert("Passo invalido! Considerando Passo1 ")
+        p = 1 
+       }
+        if (i < f){//contagem crescente
+          for (let c = i; c<= f; c += p){
+        res.innerHTML += ` ${c} \u{1F449}` // esse codigo so funciona entre crases
+       }      
+    } else {
+        for (let c =i;c>=f;c -=p ){//contagem regressiva
+            res.innerHTML += `${c} \u{1F449}`
+        }
+      }
+      res.innerHTML += `\u{1F3C1}`
     }
 }
