@@ -31,4 +31,15 @@ function adicionar() {
    num.value = " "
    num.focus()
 }
+
+function finalizar(){
+    if (valores.length == 0){
+        window.alert("adicione valores antes de finaliza!!")
+    }else {
+        let tot = valores.length
+
+        res.innerHTML = ' '
+        res.innerHTML += `<p> Ao todo, temos ${tot} números castrasdos </p>`
+    }
+}
     
