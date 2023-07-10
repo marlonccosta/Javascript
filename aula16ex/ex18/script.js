@@ -25,6 +25,7 @@ function adicionar() {
     let item = document.createElement('option')
     item.text = `Varlor ${num.value} adicionado.`
     lista.appendChild(item)
+    res.innerHTML = " "
    } else {
     window.alert('Valor inválido ou já encontrado na lista')
    }
