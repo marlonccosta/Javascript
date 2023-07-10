@@ -40,7 +40,10 @@ function finalizar(){
         let tot = valores.length
         let maior = valores[0]
         let menor = valores[0]
-        for (let pos in valores){
+        let soma = 0
+        let media = 0
+        for (let pos in valores){//laço de percurso, que varre o vetor inteeiro
+            soma += valores[pos]
             if (valores[pos] > maior)
             maior = valores[pos]
             if (valores[pos] < menor)
@@ -51,6 +54,7 @@ function finalizar(){
         res.innerHTML += `<p> Ao todo, temos ${tot} números castrasdos </p>`
         res.innerHTML += `<p> O maior valor informado foi ${maior}.</p>`
         res.innerHTML += `<p> O menor valor informado foi ${menor}.</p>`
+        res.innerHTML += `<p> Somando todos os valores  ${soma}</p>`
     }
 }
     
